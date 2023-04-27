@@ -28,7 +28,7 @@ header{
     font-weight: 600;
     pointer-events: none;
     opacity: 0;
-    animation: slideTop .1s ease forwards;
+    animation: slideTop 1s ease forwards;
 }
 .navbar a{
     display: inline-block;
@@ -38,7 +38,7 @@ header{
     font-weight: 500;
     margin-left: 35px;
     opacity: 0;
-    animation: slideTop .5s ease forwards;
+    animation: slideTop 5s ease forwards;
     animation-delay: calc(.2s * var(--i));
 }
 .navbar a.active, .navbar a:hover{
@@ -64,16 +64,22 @@ header{
     font-weight: 700;
     line-height: 1.2;
     opacity: 0;
-    animation: slideRight .1s ease forwards;
+    animation: slideRight 1s ease forwards;
     animation-delay: .7s;
 }
 .home-content h3{
     font-size: 32px;
     font-weight: 700;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
 }
 .home-content p{
     font-size: 16px;
     margin: 20px 0 40px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.3s;
 }
 .btn{
     position: relative;
@@ -90,6 +96,9 @@ header{
     font-weight: 600;
     letter-spacing: 1px;
     z-index: 1;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1.8s;
 }
 .btn::before{
     content: '';
@@ -220,5 +229,25 @@ header{
     100%{
         opacity: 1;
         transform: translateY(0);
+    }
+}
+@keyframes slideRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
     }
 }
