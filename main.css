@@ -28,14 +28,18 @@ header{
     font-weight: 600;
     pointer-events: none;
     opacity: 0;
-    animation: slideTop 1s ease forwards;
+    animation: slideTop .1s ease forwards;
 }
 .navbar a{
+    display: inline-block;
     font-size: 18px;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 .navbar a.active, .navbar a:hover{
     background: linear-gradient(45deg, #f06, #3cf);
@@ -59,6 +63,9 @@ header{
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
+    opacity: 0;
+    animation: slideRight .1s ease forwards;
+    animation-delay: .7s;
 }
 .home-content h3{
     font-size: 32px;
@@ -204,4 +211,14 @@ header{
     transform: translateX(-50%);
     max-width: 300px;
     object-fit: cover;
+}
+@keyframes slideTop{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
