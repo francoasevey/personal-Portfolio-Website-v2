@@ -177,3 +177,19 @@ header{
     background: #0c1022;
     border-radius: 50%;
 }
+.glowing-circle .image{
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+}
+.image img{
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 300px;
+    object-fit: cover;
+}
