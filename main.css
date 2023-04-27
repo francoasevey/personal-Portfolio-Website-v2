@@ -191,8 +191,8 @@ header{
     transform: scale(0);
 }
 .home-img{
-    width: 410px;
-    height: 410px;
+    width: 393px;
+    height: 393px;
     opacity: 0;
     animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
     animation-delay: 2.1s, 3.1s;
